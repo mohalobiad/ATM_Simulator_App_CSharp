@@ -1,0 +1,23 @@
+CREATE DATABASE IF NOT EXISTS atmsimulatorapp;
+USE atmsimulatorapp;
+
+CREATE TABLE IF NOT EXISTS users (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    userName VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) UNIQUE NOT NULL,
+    current_amount DECIMAL(10,2) DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS admins (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    userName VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    Email VARCHAR(255) UNIQUE NOT NULL
+);
+
+INSERT INTO users (userName, password, Email, current_amount) 
+VALUES ('user', 'user', 'moh.alobiad@gmail.com', 4208.00);
+
+INSERT INTO admins (userName, password, Email) 
+VALUES ('admin', 'admin', 'happydragneelas@gmail.com');
