@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS admins (
 );
 
 INSERT INTO users (userName, password, Email, current_amount) 
-VALUES ('user', 'user', 'moh.alobiad@gmail.com', 4208.00);
+VALUES ('user', 'user', 'user@example.com', 4208.00);
 
 INSERT INTO admins (userName, password, Email) 
-VALUES ('admin', 'admin', 'happydragneelas@gmail.com');
+VALUES ('admin', 'admin', 'admin@example.com');
